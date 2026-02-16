@@ -14,7 +14,7 @@ class Command(BaseCommand):
         client_secret = settings.SPOTIPY_CLIENT_SECRET
 
         if not client_id or not client_secret:
-            self.stderr.write(self.style.ERROR("❌ Spotify credentials not found in environment variables."))
+            self.stderr.write(self.style.ERROR("Spotify credentials not found in environment variables."))
             return
 
         sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(
@@ -26,16 +26,16 @@ class Command(BaseCommand):
         for artist in Artists.objects.all()[1:]:
             time.sleep(.5)
             if not artist.spotify_id:
-                self.stdout.write(self.style.WARNING(f"⚠ No Spotify ID for {artist.name}, skipping."))
+                self.stdout.write(self.style.WARNING(f"No Spotify ID for {artist.name}, skipping."))
                 continue
 
             try:
                 data = sp.artist(artist.spotify_id)
                 artist.complete_artist_json = data
                 artist.save(update_fields=['complete_artist_json'])
-                self.stdout.write(self.style.SUCCESS(f"✔ Updated: {artist.name}"))
+                self.stdout.write(self.style.SUCCESS(f"Updated: {artist.name}"))
                 updated += 1
             except Exception as e:
-                self.stderr.write(self.style.ERROR(f"❌ Error for {artist.name}: {e}"))
+                self.stderr.write(self.style.ERROR(f"Error for {artist.name}: {e}"))
 
-        self.stdout.write(self.style.SUCCESS(f"🎉 Done! {updated} artists updated."))
+        self.stdout.write(self.style.SUCCESS(f"Done! {updated} artists updated."))
