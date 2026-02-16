@@ -1,7 +1,6 @@
 """
 Django settings for spotify_apps project.
 """
-
 from pathlib import Path
 import os
 from dotenv import load_dotenv
