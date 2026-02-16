@@ -74,7 +74,7 @@
             text-align: center;
             margin-top: 0;
             display: flex;
-            justify-content: space-between; /* Align the content horizontally */
+            justify-content: space-between; 
             flex-direction: row;
             width: 100%;
             max-height: 70vh;
@@ -84,10 +84,10 @@
         margin-bottom: 20px;
         color: #1DB954;
         font-weight: 700;
-        background-color: rgba(0, 0, 0, 0.75); /* Same semi-transparent background as the container */
-        padding: 10px 20px; /* Added padding for better readability */
-        border-radius: 10px; /* Optional: rounds the corners of the heading */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Optional: gives it some depth */
+        background-color: rgba(0, 0, 0, 0.75); 
+        padding: 10px 20px; 
+        border-radius: 10px; 
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); 
     }
 
         .artist-list {
@@ -98,7 +98,7 @@
         max-height: 70vh;
         overflow: scroll;
         scrollbar-width: none;
-        width: 600px; /* Set a fixed width instead of percentage */
+        width: 600px; 
         padding-right: 10px;
 }
 
@@ -170,21 +170,21 @@
 
         /* Map styling */
         #map {
-            width: 45%; /* Reduced width to leave more space for the list */
-            height: 550px; /* Increased height for better visibility */
-            margin-top: 20px; /* Moved the map down */
+            width: 45%; 
+            height: 550px; 
+            margin-top: 20px; 
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .container {
-                flex-direction: column; /* Stack elements vertically on small screens */
-                max-height: none; /* No max height on small screens */
+                flex-direction: column;
+                max-height: none; 
             }
 
             .artist-list,
             #map {
-                width: 100%; /* Take full width on small screens */
+                width: 100%; 
                 margin-bottom: 20px;
             }
 
@@ -395,8 +395,8 @@ window.onload = function() {
     }
 
     .dot-icon.highlighted .dot {
-        background-color: #FF4069; /* Highlight color */
-        transform: scale(1.5); /* Increase the size for highlighting */
+        background-color: #FF4069; 
+        transform: scale(1.5); 
     }
 </style>
 
