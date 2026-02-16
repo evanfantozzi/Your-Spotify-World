@@ -70,12 +70,12 @@
         // Open Spotify logout in a new tab
         const spotifyLogoutWindow = window.open('https://accounts.spotify.com/en/logout', '_blank');
 
-        // Wait a few seconds, then redirect back to our landing page
+        // Wait a few seconds, then redirect back to landing page
         setTimeout(() => {
             if (spotifyLogoutWindow) {
                 spotifyLogoutWindow.close();
             }
-            window.location.href = "/";  // Change this to your actual landing page URL
+            window.location.href = "/";  
         }, 1000);  // Wait for 1 second before redirecting
     </script>
 </head>
