@@ -160,7 +160,7 @@ def logout(request):
     request.session.flush()  # Clear session data
 
 
-    # Redirect to a custom page that will handle Spotify logout and return to our site
+    # Redirect to a custom page that will handle Spotify logout and return to the site
     return redirect('logout_redirect')
 
 def logout_redirect(request):
